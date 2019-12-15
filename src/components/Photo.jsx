@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
-import myPhoto from '../photos/kyle.jpg';
+import React, { Component } from 'react';
+import myPhoto from '../photos/tessa.png';
 
 const style = {
-  photo : {
+  photo: {
     marginTop: '5%',
     width: '75%',
     borderRadius: '7px'
@@ -17,9 +17,9 @@ class Photo extends Component {
 
   render() {
     return (
-        <div>
-            <img alt="kyle photo" className="is-centered" style={style.photo} src={myPhoto}/>
-        </div>
+      <div>
+        <img alt="tessa photo" className="is-centered" style={style.photo} src={myPhoto} />
+      </div>
     );
   }
 

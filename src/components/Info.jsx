@@ -35,10 +35,10 @@ class Info extends Component {
             </h2>
           </li>
           <li>
-            <h2 className="subtitle is-4">tessaurb@gmail.com</h2>
+            <h2 className="subtitle is-4">hello@tessaraye.me</h2>
           </li>
           <li>
-            <h2 className="subtitle is-4">661-478-2106</h2>
+            <h2 className="subtitle is-4">661.478.2106</h2>
           </li>
         </ul>
       </div>
