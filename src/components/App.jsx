@@ -79,13 +79,7 @@ class App extends Component {
             <Work />
           </div>
         </div>
-        <hr />
-        <div>
-          <Skills />
-        </div>
-        <div className="column has-text-centered">
-          <References />
-        </div>
+        
       </div>
     );
   }

@@ -15,7 +15,9 @@ const style = {
 };
 
 let GTAinfo, CRAinfo, CSAIinfo, CRFinfo,
-  SPCinfo, DAinfo, OIinfo, CIinfo, VCinfo, RAinfo;
+  SPCinfo, DAinfo, OIinfo, CIinfo, VCinfo, RAinfo,
+  VRCMinfo,FIinfo, VLinfo, OICMinfo, CI2info, GVinfo
+  ;
 
 let data = {
   CSAI: {
@@ -89,7 +91,50 @@ let data = {
     subtitle: "Chapman University, California",
     date: "Aug. 2012 – Dec. 2012",
     description1: "Conducted content analysis under Drs. Veronica Hefner and Riva Tukachinsky for Entertainment Industries Council examining the depiction of mental health in popular fiction television. Ensured intercoder reliability by adhering to and expanding codebook as necessary."
-  }
+  },
+  VRCM: {
+    abb: "VRCM",
+    title: "Volunteer Retreat Co-Manager",
+    subtitle: "Banyan Grove, Forest Knolls, CA",
+    date: "November 2019",
+    description1: "Cultivated a warm, supportive, and spiritual environment at a five-day silent meditation retreat for attendees who work in animal protection and advocacy. Anticipated attendees’ practical and emotional needs needs and identified creative solutions to issues alongside co-manager."
+  },
+  FI: {
+    abb: "FI",
+    title: "Farm Intern",
+    subtitle: "Everett Family Farm, Santa Cruz, CA",
+    date: "May 2019 - June 2019",
+    description1: "Learned and executed organic farming practices, including: sewing, planting, harvesting, installing irrigation, covering crops, transplanting irrigation, managing the farmstand, and taking inventory. Sparked curious and engaging dialogue with fellow interns and farm workers while weeding, watering, and harvesting together."
+  },
+  VL: {
+    abb: "VL",
+    title: "Volunteer Leader",
+    subtitle: "Mercy For Animals, San Francisco, CA",
+    date: "June 2016 & June 2017",
+    description1: "Periodically lead the MFA contingent at San Francisco Pride. Reached over 8,000 people each year to educate about the suffering endured by factory farmed animals and how to prevent this cruelty. Coordinated pride materials (including literature, flags, t-shirts) and volunteer attendance."
+  },
+  OICM: {
+    abb: "OICM",
+    title: "Outreach Intern and Crew Member",
+    subtitle: "People for the Ethical Treatment of Animals, Traveling Position.",
+    date: "June 2016 - August 2015",
+    description1: "Initiated the first stages of PETA’s innovative iChicken virtual reality tour, engaging animal rights outreach through empathy-building, narrative-based virtual reality technology. Traveled to various cities in 14 U.S states, distributing over 2,000 vegan recipe books and fact sheets. Represented world’s largest animal rights organization by discussing its mission with over 1,200 city-specific locals and answering face-to-face inquiry, maintaining a positive and professional demeanor in the face of the sensitive issue of animal cruelty."
+  },
+  CI2: {
+    abb: "CI2",
+    title: "Communications Intern",
+    subtitle: "The Bolsa Chica Conservancy, Huntington Beach, CA",
+    date: "January 2015 - June 2015",
+    description1: "Maintained and created engaging and educational content for the Conservancy’s online social media presence, including Facebook, Twitter, Instagram, and WordPress. Assisted in production and script writing of numerous promotional videos. Co-wrote award application collaboration with Executive Director, resulting in a grant dedicated to promotional video content creation for the organization. Wrote content for newsletters, press releases, and website pages.Conducted over 100 donation solicitation calls for the BCC’s annual fundraising gala."
+  },
+  GV: {
+    abb: "GV",
+    title: "General Volunteer",
+    subtitle: "Gigatown Dunedin, Dunedin, Otago, New Zealand",
+    date: "October 2014 - November 2014",
+    description1: "Prepared, sorted, and distributed promotional paraphernalia for the purpose of engaging the Dunedin public to participate in the social media competition for ultra-fast broadband services."
+  },
+  
 }
 
 class PastPositions extends Component {
@@ -105,7 +150,13 @@ class PastPositions extends Component {
       IOtoggle: false,
       CItoggle: false,
       VCtoggle: false,
-      RAtoggle: false
+      RAtoggle: false,
+      VRCMtoggle: false,
+      FItoggle: false, 
+      VLtoggle: false, 
+      OICMtoggle: false, 
+      CI2toggle: false, 
+      GVtoggle: false,
     };
   }
   CSAIClick = () => {
@@ -159,6 +210,37 @@ class PastPositions extends Component {
       RAtoggle: !this.state.RAtoggle
     });
   };
+  VRCMClick = () => {
+    this.setState({
+      VRCMtoggle: !this.state.VRCMtoggle
+    });
+  };
+  FIClick = () => {
+    this.setState({
+      FItoggle: !this.state.FItoggle
+    });
+  };
+  VLClick = () => {
+    this.setState({
+      VLtoggle: !this.state.VLtoggle
+    });
+  };
+  OICMClick = () => {
+    this.setState({
+      OICMtoggle: !this.state.OICMtoggle
+    });
+  };
+  CI2Click = () => {
+    this.setState({
+      CI2toggle: !this.state.CI2toggle
+    });
+  };
+  GVClick = () => {
+    this.setState({
+      GVtoggle: !this.state.GVtoggle
+    });
+  };
+  
 
   renderExpanded = (abb, title, subtitle, date, description1, description2) => {
     let click = abb + "Click";
@@ -234,6 +316,13 @@ class PastPositions extends Component {
     CIinfo = this.renderAccordion(data.CI.abb);
     VCinfo = this.renderAccordion(data.VC.abb);
     RAinfo = this.renderAccordion(data.RA.abb);
+    VRCMinfo = this.renderAccordion(data.VRCM.abb);
+    FIinfo = this.renderAccordion(data.FI.abb);
+    VLinfo = this.renderAccordion(data.VL.abb);
+    OICMinfo = this.renderAccordion(data.OICM.abb);
+    CI2info = this.renderAccordion(data.CI2.abb);
+    GVinfo = this.renderAccordion(data.GV.abb);
+    
     // if (this.state.GTAtoggle) {
     //   GTAinfo = (
     //     <div>
@@ -691,6 +780,20 @@ class PastPositions extends Component {
           {VCinfo}
           <br />
           {RAinfo}
+          <br />
+          <h1 className="title is-2">Internships and Volunteering</h1>
+          {VRCMinfo}
+          <br />
+          {FIinfo}
+          <br />
+          {VLinfo}
+          <br />
+          {OICMinfo}
+          <br />
+          {CI2info}
+          <br />
+          {GVinfo}
+          <br />
         </div>
       </div>
     );

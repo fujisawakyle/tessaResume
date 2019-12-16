@@ -15,7 +15,9 @@ const style = {
   }
 };
 
-let MSinfo, BAinfo, YTTinfo, TEFLinfo, SAinfo, PUBinfo, PRESinfo, GRANTinfo, AWARDinfo;
+let MSinfo, BAinfo, YTTinfo, TEFLinfo, SAinfo, PUBinfo, 
+PRESinfo, GRANTinfo, AWARDinfo, ASinfo, PADinfo,
+EBCinfo, AOWDCinfo, RCinfo, PAinfo, SKILLinfo;
 
 let data = {
   MS: {
@@ -82,6 +84,61 @@ let data = {
     award5: "Dean’s Honors List. Chapman University, 2013 - 2015.",
     award6: "Magna Cum Laude. Chapman University, 2013 - 2015.",
     award7: "Lambda Pi Eta Communication Honors Society. Chapman University, 2014-2015.",
+  },
+  AS: {
+    abb: "AS",
+    title: "Academic Service",
+    service1: "Elected School of Communication Graduate Student Council Representative and elected Graduate Student Council secretary. Chapman University, 2018-2019.",
+    service2: "Co-organized advocacy event “Food and the Future” hosted by Vegan Outreach. Chapman University, Spring 2015.",
+  },
+  PAD: {
+    abb: "PAD",
+    title: "Professional & Academic Development",
+    dev1: "Nonverbal communication in the workplace (workshop). Chapman University, Spring 2019.",
+    dev2: "Invited to speak at Dr. Jennifer Waldeck’s roundtable session on teaching Business Communication at 2018 National Communication Association conference in Salt Lake City, UT, Spring 2019.",
+    dev3: "Three Minute Thesis Contestant. Chapman University, Spring 2018.",
+    dev4: "SPSS Basics Workshop. Chapman University, Fall 2017.",
+    dev5: "Pursuing Research Grants Workshop. Chapman University, Fall 2017.",
+  },
+  EBC: {
+    abb: "EBC",
+    title: "Earthbag Building Certification",
+    subtitle: "Woven Earth, Ghyampesal, Gorkha, Nepal",
+    date: "October 2015",
+    description1: "Took part in sustainable earthbag building workshop; a group of volunteers came together to fund and build two earthbag houses in the earthquake-affected village of Ghyampesal. Learned and performed the sustainable building technique of earthbag, as well as aided in the funding of local people's education of this resilient and long-lasting technique."
+  },
+  AOWDC: {
+    abb: "AOWDC",
+    title: "Autonomous Open Water Diver Certification",
+    subtitle: "Scuba Schools International, Yasawa Islands, Fiji",
+    date: "September 2014",
+    description1: ""
+  },
+  RC: {
+    abb: "RC",
+    title: "Reiki I Certification",
+    subtitle: "GN Reiki Meditation Center, Pokhara, Nepal",
+    date: "November 2019",
+    description1: ""
+  },
+  PA: {
+    abb: "PA",
+    title: "Personal Attributes",
+    attr1: "Organized, punctual, dependable",
+    attr2: "Hilarious, optimistic and pretty fun",
+    attr3: "Natural leader and lover of task delegation by team member strengths",
+    attr4: "Usually wants to hang out",
+    attr5: "Creative and often looking for improvements for effectiveness",
+    attr6: "Meditator, yogi, and avid doodler",
+  },
+  SKILL: {
+    abb: "SKILL",
+    title: "Skills",
+    skill1: "Advanced in SPSS and Microsoft Office",
+    skill2: "Proficient in Photoshop, iMovie, InDesign, MySQL, HTML, and WordPress",
+    skill3: "Proficient Spanish speaker",
+    skill4: "Experienced global traveler",
+    skill5: "Experience facilitating focus groups",
   }
 
 }
@@ -99,6 +156,13 @@ class Education extends Component {
       PREStoggle: false,
       GRANTtoggle: false,
       AWARDtoggle: false,
+      AStoggle: false,
+      PADtoggle: false,
+      EBCtoggle: false, 
+      AOWDCtoggle: false, 
+      RCtoggle: false,
+      PAtoggle: false,
+      SKILLtoggle: false,
     };
   }
   MSClick = () => {
@@ -150,6 +214,41 @@ class Education extends Component {
   AWARDClick = () => {
     this.setState({
       AWARDtoggle: !this.state.AWARDtoggle
+    });
+  };
+  ASClick = () => {
+    this.setState({
+      AStoggle: !this.state.AStoggle
+    });
+  };
+  PADClick = () => {
+    this.setState({
+      PADtoggle: !this.state.PADtoggle
+    });
+  };
+  EBCClick = () => {
+    this.setState({
+      EBCtoggle: !this.state.EBCtoggle
+    });
+  };
+  AOWDCClick = () => {
+    this.setState({
+      AOWDCtoggle: !this.state.AOWDCtoggle
+    });
+  };
+  RCClick = () => {
+    this.setState({
+      RCtoggle: !this.state.RCtoggle
+    });
+  };
+  PAClick = () => {
+    this.setState({
+      PAtoggle: !this.state.PAtoggle
+    });
+  };
+  SKILLClick = () => {
+    this.setState({
+      SKILLtoggle: !this.state.SKILLtoggle
     });
   };
 
@@ -329,6 +428,138 @@ class Education extends Component {
       </div>
     )
   }
+  renderExpandedAS = (abb) => {
+    let click = abb + "Click";
+    return (
+      <div>
+        <h2 style={{ marginBottom: "0" }} className="title is-4">{data[abb].title}</h2>
+
+        <span>
+          <i onClick={this[click]} className="fa fa-angle-up" style={{ fontSize: "2rem" }} />
+          <br />
+          <ul style={{ lineHeight: "1" }}>
+            <li style={style.infoText}>
+              {data.AS.service1}
+            </li>
+            <br />
+            <li style={style.infoText}>
+              {data.AS.service2}
+            </li>
+          </ul>
+        </span>
+
+      </div>
+    )
+  }
+  renderExpandedPAD = (abb) => {
+    let click = abb + "Click";
+    return (
+      <div>
+        <h2 style={{ marginBottom: "0" }} className="title is-4">{data[abb].title}</h2>
+
+        <span>
+          <i onClick={this[click]} className="fa fa-angle-up" style={{ fontSize: "2rem" }} />
+          <br />
+          <ul style={{ lineHeight: "1" }}>
+            <li style={style.infoText}>
+              {data.PAD.dev1}
+            </li>
+            <br />
+            <li style={style.infoText}>
+              {data.PAD.dev2}
+            </li>
+            <br />
+            <li style={style.infoText}>
+              {data.PAD.dev3}
+            </li>
+            <br />
+            <li style={style.infoText}>
+              {data.PAD.dev4}
+            </li>
+            <br />
+            <li style={style.infoText}>
+              {data.PAD.dev5}
+            </li>
+          </ul>
+        </span>
+
+      </div>
+    )
+  }
+  renderExpandedPA = (abb) => {
+    let click = abb + "Click";
+    console.log('PAclick')
+    return (
+      <div>
+        <h2 style={{ marginBottom: "0" }} className="title is-4">{data[abb].title}</h2>
+
+        <span>
+          <i onClick={this[click]} className="fa fa-angle-up" style={{ fontSize: "2rem" }} />
+          <br />
+          <ul style={{ lineHeight: "1" }}>
+            <li style={style.infoText}>
+            <i style={style.icon} className="fa fa-circle" />{data.PA.attr1}
+            </li>
+            <br />
+            <li style={style.infoText}>
+            <i style={style.icon} className="fa fa-circle" />{data.PA.attr2}
+            </li>
+            <br />
+            <li style={style.infoText}>
+            <i style={style.icon} className="fa fa-circle" />{data.PA.attr3}
+            </li>
+            <br />
+            <li style={style.infoText}>
+            <i style={style.icon} className="fa fa-circle" />{data.PA.attr4}
+            </li>
+            <br />
+            <li style={style.infoText}>
+            <i style={style.icon} className="fa fa-circle" />{data.PA.attr5}
+            </li>
+            <br />
+            <li style={style.infoText}>
+            <i style={style.icon} className="fa fa-circle" />{data.PA.attr6}
+            </li>
+          </ul>
+        </span>
+      </div>
+    )
+  }
+  renderExpandedSKILL = (abb) => {
+    let click = abb + "Click";
+    return (
+      <div>
+        <h2 style={{ marginBottom: "0" }} className="title is-4">{data[abb].title}</h2>
+
+        <span>
+          <i onClick={this[click]} className="fa fa-angle-up" style={{ fontSize: "2rem" }} />
+          <br />
+          <ul style={{ lineHeight: "1" }}>
+            <li style={style.infoText}>
+            <i style={style.icon} className="fa fa-circle" />{data.SKILL.skill1}
+            </li>
+            <br />
+            <li style={style.infoText}>
+            <i style={style.icon} className="fa fa-circle" />{data.SKILL.skill2}
+            </li>
+            <br />
+            <li style={style.infoText}>
+            <i style={style.icon} className="fa fa-circle" />{data.SKILL.skill3}
+            </li>
+            <br />
+            <li style={style.infoText}>
+            <i style={style.icon} className="fa fa-circle" />{data.SKILL.skill4}
+            </li>
+            <br />
+            <li style={style.infoText}>
+            <i style={style.icon} className="fa fa-circle" />{data.SKILL.skill5}
+            </li>
+          </ul>
+        </span>
+
+      </div>
+    )
+  }
 
   renderCollapsed = (abb, title, subtitle, date) => {
     let click = abb + "Click";
@@ -397,6 +628,26 @@ class Education extends Component {
           this.renderExpandedAWARD(data[abb].abb)
         )
       }
+      else if (abb === "AS") {
+        return (
+          this.renderExpandedAS(data[abb].abb)
+        )
+      }
+      else if (abb === "PAD") {
+        return (
+          this.renderExpandedPAD(data[abb].abb)
+        )
+      }
+      else if (abb === "PA") {
+        return (
+          this.renderExpandedPA(data[abb].abb)
+        )
+      }
+      else if (abb === "SKILL") {
+        return (
+          this.renderExpandedSKILL(data[abb].abb)
+        )
+      }
     } else {
       return (
         this.renderCollapsedTitleOnly(data[abb].abb, data[abb].title)
@@ -430,6 +681,13 @@ class Education extends Component {
     PRESinfo = this.renderAccordionCustom(data.PRES.abb); 
     GRANTinfo = this.renderAccordionCustom(data.GRANT.abb);
     AWARDinfo = this.renderAccordionCustom(data.AWARD.abb);
+    ASinfo = this.renderAccordionCustom(data.AS.abb);
+    PADinfo = this.renderAccordionCustom(data.PAD.abb);
+    EBCinfo = this.renderAccordion(data.EBC.abb);
+    AOWDCinfo = this.renderAccordion(data.AOWDC.abb);
+    RCinfo = this.renderAccordion(data.RC.abb);
+    PAinfo = this.renderAccordionCustom(data.PA.abb);
+    SKILLinfo = this.renderAccordionCustom(data.SKILL.abb);
 
     return (
       <div>
@@ -453,6 +711,21 @@ class Education extends Component {
           {GRANTinfo}
           <br />
           {AWARDinfo}
+          <br />
+          {ASinfo}
+          <br />
+          {PADinfo}
+          <br />
+          <h1 className="title is-2">Enrichment</h1>
+          {EBCinfo}
+          <br />
+          {AOWDCinfo}
+          <br />
+          {RCinfo}
+          <br />
+          {PAinfo}
+          <br />
+          {SKILLinfo}
         </div>
       </div>
     );
