@@ -21,7 +21,7 @@ class Info extends Component {
         <ul>
           <li>
             <h1 style={style.box} className="title is-1">
-              Tessa Raye Urbanovich <br/>MS, YTT 200
+              Tessa Raye Urbanovich <br />MS, YTT 200
             </h1>
           </li>
           <span className="icon">
@@ -29,13 +29,13 @@ class Info extends Component {
             <i style={style.icon} className="fa fa-heart" />
             <i style={style.icon} className="fa fa-heart" />
           </span>
-          <li>
+          {/* <li>
             <h2 className="subtitle is-4">
               <a href="https://tessaraye.me">tessaraye.me</a>
             </h2>
-          </li>
+          </li> */}
           <li>
-            <h2 className="subtitle is-4">hello@tessaraye.me</h2>
+            <h2 className="subtitle is-4"><a href="mailto:tessa.urb@gmail.com">tessa.urb@gmail.com</a></h2>
           </li>
           <li>
             <h2 className="subtitle is-4">661.478.2106</h2>
