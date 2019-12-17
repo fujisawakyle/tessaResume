@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const style = {
   box: {
-    fontSize: '2em'
+    fontSize: '3rem'
   },
   icon: {
     paddingLeft: '0.1em'
@@ -21,7 +21,7 @@ class Info extends Component {
         <ul>
           <li>
             <h1 style={style.box} className="title is-1">
-              Tessa Raye Urbanovich MS, YTT200
+              Tessa Raye Urbanovich <br/>MS, YTT 200
             </h1>
           </li>
           <span className="icon">

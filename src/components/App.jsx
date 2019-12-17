@@ -60,7 +60,7 @@ class App extends Component {
 
         <div className="container" style={style.flex}>
           <div className="columns is-vcentered">
-            <div className="column is-half has-text-centered">
+            <div style={{maxWidth: "400px",margin: "0 auto"}} className="column is-half has-text-centered">
               <Photo />
             </div>
             <div className="column is-5">
@@ -70,7 +70,7 @@ class App extends Component {
           </div>
         </div>
         <hr />
-        <div className="columns is-centered is-text-centered small-centered">
+        <div style={{maxWidth: "74em", margin: "0 auto"}} className="columns is-centered is-text-centered small-centered">
           <div style={{paddingLeft: "1.5rem"}} className="column is-6 is-centered is-text-centered">
             <Education />
           </div>
@@ -80,7 +80,7 @@ class App extends Component {
           
         </div>
         <hr />
-        <div className="columns is-centered is-text-centered small-centered">
+        <div style={{maxWidth: "74em", margin: "0 auto"}} className="columns is-centered is-text-centered small-centered">
           <div style={{paddingLeft: "1.5rem"}} className="column is-6 is-centered is-text-centered">
             <Skill />
           </div>
