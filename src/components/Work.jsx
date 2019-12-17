@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 
 const style = {
   infoText: {
-    fontSize: '0.7em',
+    fontSize: '14px',
+    fontWeight: '300',
     textAlign: 'left',
-    paddingLeft: '22%',
-    paddingRight: '22%'
+    paddingLeft: '5%',
+    paddingRight: '5%'
   },
   icon: {
     fontSize: '0.5em',
@@ -116,7 +117,7 @@ let data = {
   OICM: {
     abb: "OICM",
     title: "Outreach Intern and Crew Member",
-    subtitle: "People for the Ethical Treatment of Animals, Traveling Position.",
+    subtitle: "People for the Ethical Treatment of Animals, Traveling Position",
     date: "June 2016 - August 2015",
     description1: "Initiated the first stages of PETA’s innovative iChicken virtual reality tour, engaging animal rights outreach through empathy-building, narrative-based virtual reality technology. Traveled to various cities in 14 U.S states, distributing over 2,000 vegan recipe books and fact sheets. Represented world’s largest animal rights organization by discussing its mission with over 1,200 city-specific locals and answering face-to-face inquiry, maintaining a positive and professional demeanor in the face of the sensitive issue of animal cruelty."
   },
@@ -772,10 +773,10 @@ class PastPositions extends Component {
           {SPCinfo}
           <br />
           {DAinfo}
-          <br />
+          {/* <br />
           {OIinfo}
           <br />
-          {CIinfo}
+          {CIinfo} */}
           <br />
           {VCinfo}
           <br />

@@ -3,7 +3,8 @@ import Photo from './Photo';
 import Info from './Info';
 import Work from './Work';
 import Education from './Education';
-import Skills from './Skills';
+import Skill from './Skill';
+import PersonalAttributes from './PersonalAttributes';
 import References from './References';
 
 const style = {
@@ -50,7 +51,6 @@ class App extends Component {
         </div>
         <div style={style.flex}>
           <div style={style.box}>
-          <Skills />
           </div>
           <div style={style.box}>
           <References />
@@ -71,15 +71,26 @@ class App extends Component {
         </div>
         <hr />
         <div className="columns is-centered is-text-centered small-centered">
-          {/* <div className="column is-1"></div> */}
-          <div className="column is-offset-1 is-4 is-centered is-text-centered">
+          <div style={{paddingLeft: "1.5rem"}} className="column is-6 is-centered is-text-centered">
             <Education />
           </div>
-          <div className="column has-text-centered">
+          <div className="column is-6 has-text-centered">
             <Work />
           </div>
+          
         </div>
-        
+        <hr />
+        <div className="columns is-centered is-text-centered small-centered">
+          <div style={{paddingLeft: "1.5rem"}} className="column is-6 is-centered is-text-centered">
+            <Skill />
+          </div>
+          <div className="column is-6 has-text-centered">
+            <PersonalAttributes />
+          </div>
+        </div>
+        <br/>
+        <br/>
+
       </div>
     );
   }

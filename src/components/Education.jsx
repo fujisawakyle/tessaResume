@@ -112,14 +112,14 @@ let data = {
     title: "Autonomous Open Water Diver Certification",
     subtitle: "Scuba Schools International, Yasawa Islands, Fiji",
     date: "September 2014",
-    description1: ""
+    description1: "Faced a top-ranking fear by becoming a certified diver after this one week course at Manta Ray Island. Course content included equipment preparation and maintenance, underwater and emergency safety, health risks, and best safety practices. Included a terrifying night dive."
   },
   RC: {
     abb: "RC",
     title: "Reiki I Certification",
     subtitle: "GN Reiki Meditation Center, Pokhara, Nepal",
     date: "November 2019",
-    description1: ""
+    description1: "Learned the basics of attuning to reiki energy in order to provide energetic healing to others."
   },
   PA: {
     abb: "PA",
@@ -147,7 +147,7 @@ class Education extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      MStoggle: false,
+      MStoggle: true,
       BAtoggle: false,
       YTTtoggle: false,
       TEFLtoggle: false,
@@ -487,76 +487,58 @@ class Education extends Component {
     )
   }
   renderExpandedPA = (abb) => {
-    let click = abb + "Click";
-    console.log('PAclick')
     return (
       <div>
-        <h2 style={{ marginBottom: "0" }} className="title is-4">{data[abb].title}</h2>
-
-        <span>
-          <i onClick={this[click]} className="fa fa-angle-up" style={{ fontSize: "2rem" }} />
-          <br />
           <ul style={{ lineHeight: "1" }}>
             <li style={style.infoText}>
-            <i style={style.icon} className="fa fa-circle" />{data.PA.attr1}
+            {data.PA.attr1}
             </li>
             <br />
             <li style={style.infoText}>
-            <i style={style.icon} className="fa fa-circle" />{data.PA.attr2}
+            {data.PA.attr2}
             </li>
             <br />
             <li style={style.infoText}>
-            <i style={style.icon} className="fa fa-circle" />{data.PA.attr3}
+            {data.PA.attr3}
             </li>
             <br />
             <li style={style.infoText}>
-            <i style={style.icon} className="fa fa-circle" />{data.PA.attr4}
+            {data.PA.attr4}
             </li>
             <br />
             <li style={style.infoText}>
-            <i style={style.icon} className="fa fa-circle" />{data.PA.attr5}
+            {data.PA.attr5}
             </li>
             <br />
             <li style={style.infoText}>
-            <i style={style.icon} className="fa fa-circle" />{data.PA.attr6}
+            {data.PA.attr6}
             </li>
           </ul>
-        </span>
       </div>
     )
   }
   renderExpandedSKILL = (abb) => {
-    let click = abb + "Click";
     return (
       <div>
-        <h2 style={{ marginBottom: "0" }} className="title is-4">{data[abb].title}</h2>
-
-        <span>
-          <i onClick={this[click]} className="fa fa-angle-up" style={{ fontSize: "2rem" }} />
-          <br />
-          <ul style={{ lineHeight: "1" }}>
             <li style={style.infoText}>
-            <i style={style.icon} className="fa fa-circle" />{data.SKILL.skill1}
+            {data.SKILL.skill1}
             </li>
             <br />
             <li style={style.infoText}>
-            <i style={style.icon} className="fa fa-circle" />{data.SKILL.skill2}
+            {data.SKILL.skill2}
             </li>
             <br />
             <li style={style.infoText}>
-            <i style={style.icon} className="fa fa-circle" />{data.SKILL.skill3}
+            {data.SKILL.skill3}
             </li>
             <br />
             <li style={style.infoText}>
-            <i style={style.icon} className="fa fa-circle" />{data.SKILL.skill4}
+            {data.SKILL.skill4}
             </li>
             <br />
             <li style={style.infoText}>
-            <i style={style.icon} className="fa fa-circle" />{data.SKILL.skill5}
+            {data.SKILL.skill5}
             </li>
-          </ul>
-        </span>
-
       </div>
     )
   }
@@ -638,16 +620,6 @@ class Education extends Component {
           this.renderExpandedPAD(data[abb].abb)
         )
       }
-      else if (abb === "PA") {
-        return (
-          this.renderExpandedPA(data[abb].abb)
-        )
-      }
-      else if (abb === "SKILL") {
-        return (
-          this.renderExpandedSKILL(data[abb].abb)
-        )
-      }
     } else {
       return (
         this.renderCollapsedTitleOnly(data[abb].abb, data[abb].title)
@@ -686,8 +658,8 @@ class Education extends Component {
     EBCinfo = this.renderAccordion(data.EBC.abb);
     AOWDCinfo = this.renderAccordion(data.AOWDC.abb);
     RCinfo = this.renderAccordion(data.RC.abb);
-    PAinfo = this.renderAccordionCustom(data.PA.abb);
-    SKILLinfo = this.renderAccordionCustom(data.SKILL.abb);
+    PAinfo = this.renderExpandedPA(data.PA.abb);
+    SKILLinfo = this.renderExpandedSKILL(data.SKILL.abb);
 
     return (
       <div>
@@ -722,10 +694,12 @@ class Education extends Component {
           {AOWDCinfo}
           <br />
           {RCinfo}
-          <br />
+          {/* <br />
+          <h1 className="title is-2">Personal Attributes</h1>
           {PAinfo}
           <br />
-          {SKILLinfo}
+          <h1 className="title is-2">Skills</h1>
+          {SKILLinfo} */}
         </div>
       </div>
     );
