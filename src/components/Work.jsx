@@ -17,7 +17,8 @@ const style = {
 
 let GTAinfo, CRAinfo, CSAIinfo, CRFinfo,
   SPCinfo, DAinfo, OIinfo, CIinfo, VCinfo, RAinfo,
-  VRCMinfo,FIinfo, VLinfo, OICMinfo, CI2info, GVinfo
+  VRCMinfo, FIinfo, VLinfo, OICMinfo, CI2info, GVinfo,
+  UCSCinfo
   ;
 
 let data = {
@@ -26,7 +27,7 @@ let data = {
     title: "Communication Studies Adjunct Instructor",
     subtitle: "Crafton Hills College, California",
     date: "Jun. 2019 – Aug. 2019",
-    description1: "Utilizing adult learning theory, prepared and facilitated discussion-based class lectures, activities, and assignments to encourage active learning and student engagement for a summer Interpersonal Communication course.", 
+    description1: "Utilizing adult learning theory, prepared and facilitated discussion-based class lectures, activities, and assignments to encourage active learning and student engagement for a summer Interpersonal Communication course.",
     description2: "COMMST 111 - Interpersonal Communication"
   },
   GTA: {
@@ -48,15 +49,15 @@ let data = {
     abb: "CRF",
     title: "Consumer Research Fellow",
     subtitle: "The Good Food Institute, Remote",
-    date: "Apr. 2018 – Dec. 2018",   	
+    date: "Apr. 2018 – Dec. 2018",
     description1: "Collaborated with GFI’s Senior Research Scientist to develop a research guide for promotion of meat reduction, plant-based diets, and plant-based meat, including useful theories and measures. Conducted and contributed to state-of-the-literature white paper to review research relevant to plant-based meat and to suggest evidence-based communication best practice for researchers and marketers. Designed and develop communication study to test messages and communication interventions that may increase consumer acceptance of plant-based meat."
   },
   SPC: {
     abb: "SPC",
     title: "Special Projects Coordinator",
     subtitle: "Mercy For Animals, Remote",
-    date: "Mar. 2017- Apr. 2017",	
-    description1: "Oversaw the organization's vegetarian advocacy Facebook advertising campaigns, including results-driven management of spending, performance, and content creation for accounts in four different countries. Assisted in overseeing and expanding the organization's volunteer base through Facebook networking and email blasts."
+    date: "Mar. 2017- Apr. 2017",
+    description1: "Assisted in overseeing and expanding the organization's volunteer base through Facebook networking and email blasts. Participated in the organization's vegetarian advocacy Facebook advertising campaigns, including results-driven management of spending, performance, and content creation for accounts in four different countries."
   },
   DA: {
     abb: "DA",
@@ -69,7 +70,7 @@ let data = {
     abb: "OI",
     title: "Outreach Intern",
     subtitle: "People for the Ethical Treatment of Animals, Traveling",
-    date: "Jun. 2015 – Aug. 2015",              	
+    date: "Jun. 2015 – Aug. 2015",
     description1: "Promoted animal welfare through empathy-building, narrative-based VR technology. Traveled to 14 U.S states and distributed over 2,000 recipe books. Represented world's largest animal rights organization by discussing its mission with over 1,200 US residents, maintaining a positive and professional composure in the face of the sensitive issue of animal cruelty."
   },
   CI: {
@@ -135,7 +136,14 @@ let data = {
     date: "October 2014 - November 2014",
     description1: "Prepared, sorted, and distributed promotional paraphernalia for the purpose of engaging the Dunedin public to participate in the social media competition for ultra-fast broadband services."
   },
-  
+  UCSC: {
+    abb: "UCSC",
+    title: "UCPath Generalist",
+    subtitle: "University of California, Santa Cruz",
+    date: "January 2020 - May 2020",
+    description1: "Bolstered and supported Staff Human Resources’ transition into the UCPath system by developing training materials, co-facilitating campus wide training to staff clients, troubleshooting to provide in-the-moment systems support to SHR, and developing and executing module testing plans alongside UCPath Systems Analyst and involved SHR teams."
+  }
+
 }
 
 class PastPositions extends Component {
@@ -153,11 +161,12 @@ class PastPositions extends Component {
       VCtoggle: false,
       RAtoggle: false,
       VRCMtoggle: false,
-      FItoggle: false, 
-      VLtoggle: false, 
-      OICMtoggle: false, 
-      CI2toggle: false, 
+      FItoggle: false,
+      VLtoggle: false,
+      OICMtoggle: false,
+      CI2toggle: false,
       GVtoggle: false,
+      UCSCtoggle: false,
     };
   }
   CSAIClick = () => {
@@ -241,7 +250,12 @@ class PastPositions extends Component {
       GVtoggle: !this.state.GVtoggle
     });
   };
-  
+  UCSCClick = () => {
+    this.setState({
+      UCSCtoggle: !this.state.UCSCtoggle
+    });
+  };
+
 
   renderExpanded = (abb, title, subtitle, date, description1, description2) => {
     let click = abb + "Click";
@@ -262,7 +276,7 @@ class PastPositions extends Component {
               <li style={style.infoText}>
                 {description1}
               </li>
-              <br/>
+              <br />
               <li style={style.infoText}>
                 {description2}
               </li>
@@ -274,7 +288,7 @@ class PastPositions extends Component {
   }
 
   renderCollapsed = (abb, title, subtitle, date) => {
-    let click =  abb + "Click";
+    let click = abb + "Click";
     return (
       <div>
         <h2 className="title is-4">{title}</h2>
@@ -323,7 +337,8 @@ class PastPositions extends Component {
     OICMinfo = this.renderAccordion(data.OICM.abb);
     CI2info = this.renderAccordion(data.CI2.abb);
     GVinfo = this.renderAccordion(data.GV.abb);
-    
+    UCSCinfo = this.renderAccordion(data.UCSC.abb);
+
     // if (this.state.GTAtoggle) {
     //   GTAinfo = (
     //     <div>
@@ -762,6 +777,8 @@ class PastPositions extends Component {
       <div>
         <div className="has-text-centered">
           <h1 className="title is-2">Past Positions</h1>
+          {UCSCinfo}
+          <br />
           {CSAIinfo}
           <br />
           {GTAinfo}

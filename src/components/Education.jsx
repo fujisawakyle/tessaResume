@@ -15,9 +15,9 @@ const style = {
   }
 };
 
-let MSinfo, BAinfo, YTTinfo, TEFLinfo, SAinfo, PUBinfo, 
-PRESinfo, GRANTinfo, AWARDinfo, ASinfo, PADinfo,
-EBCinfo, AOWDCinfo, RCinfo, PAinfo, SKILLinfo;
+let MSinfo, BAinfo, YTTinfo, TEFLinfo, SAinfo, PUBinfo,
+  PRESinfo, GRANTinfo, AWARDinfo, ASinfo, PADinfo,
+  EBCinfo, AOWDCinfo, RCinfo, PAinfo, SKILLinfo;
 
 let data = {
   MS: {
@@ -33,14 +33,14 @@ let data = {
     title: "200-hour Yoga Teacher Training",
     subtitle: "Himalayan Yogini",
     date: "October 2019",
-    description1: "Learned the basics of traditional Hatha yoga, including history, philosophy, and correct postures and adjustments. Practiced both yoga and meditation numerous hours daily, and practiced instructing with other teacher trainers. Nepal is also an incredibly destination and I recommend it to all interested in global travel.",
+    description1: "Learned the basics of traditional Hatha yoga, including history, philosophy, and correct postures and adjustments. Practiced both yoga and meditation numerous hours daily, and practiced instructing with other teacher trainers. Nepal is also an incredible destination and I recommend it to all interested in global travel.",
   },
   TEFL: {
     abb: "TEFL",
     title: "Teaching English as a Foreign Language",
     subtitle: "International TEFL Academy",
-    date: "December 2019 - Current",
-    description1: "Currently taking a course in teaching English as a foreign/second language. Covers instruction for individuals and groups, based on youth and adult learning theory and best practice."
+    date: "December 2019 - February 2020",
+    description1: "Completed a course in teaching English as a foreign/second language. Covers instruction for individuals and groups, based on youth and adult learning theory and best practice."
   },
   BA: {
     abb: "BA",
@@ -158,8 +158,8 @@ class Education extends Component {
       AWARDtoggle: false,
       AStoggle: false,
       PADtoggle: false,
-      EBCtoggle: false, 
-      AOWDCtoggle: false, 
+      EBCtoggle: false,
+      AOWDCtoggle: false,
       RCtoggle: false,
       PAtoggle: false,
       SKILLtoggle: false,
@@ -293,7 +293,7 @@ class Education extends Component {
           <br />
           <ul style={{ lineHeight: "1" }}>
             <li style={style.infoText}>
-              <b>Urbanovich, T.</b>, & Bevan, J. L. (in press). Promoting environmental behaviors: Applying the health belief model to diet change. <i>Journal of Environmental Communication</i>. doi:10.1080/17524032.2019.1702569
+              <b>Urbanovich, T.</b>, & Bevan, J. L. (2020). Promoting environmental behaviors: Applying the health belief model to diet change. <i>Journal of Environmental Communication</i>. doi:10.1080/17524032.2019.1702569
             </li>
             <br />
             <li style={style.infoText}>
@@ -307,7 +307,7 @@ class Education extends Component {
             </li>
             <br />
             <li style={style.infoText}>
-            Szejda, K., & <b>Urbanovich, T.</b> (2019). <i>Meat cultivation:</i> Embracing the science of nature. Project Report. Washington, DC: The Good Food Institute. Retrieved from <a href="https://www.gfi.org/files/GFI-Draft-Meat-Cultivation-Report-v8.pdf">https://www.gfi.org/files/GFI-Draft-Meat-Cultivation-Report-v8.pdf</a>
+              Szejda, K., & <b>Urbanovich, T.</b> (2019). <i>Meat cultivation:</i> Embracing the science of nature. Project Report. Washington, DC: The Good Food Institute. Retrieved from <a href="https://www.gfi.org/files/GFI-Draft-Meat-Cultivation-Report-v8.pdf">https://www.gfi.org/files/GFI-Draft-Meat-Cultivation-Report-v8.pdf</a>
             </li>
           </ul>
         </span>
@@ -327,20 +327,20 @@ class Education extends Component {
           <br />
           <ul style={{ lineHeight: "1" }}>
             <li style={style.infoText}>
-            Ball, H., Bevan, J., Craw, E., & <b>Urbanovich, T.</b> (February, 2020). Romantic Partner Interference and Psychological Reactance in the Context of Caregiving for an Aging Family Member. Paper competitively accepted for presentation at the annual meeting of the Western States Communication Association, Denver, CO.
+              Ball, H., Bevan, J., Craw, E., & <b>Urbanovich, T.</b> (February, 2020). Romantic Partner Interference and Psychological Reactance in the Context of Caregiving for an Aging Family Member. Paper competitively accepted for presentation at the annual meeting of the Western States Communication Association, Denver, CO.
             </li>
             <br />
             <li style={style.infoText}>
-            Bevan, J. L., & <b>Urbanovich, T.</b> (November, 2019). Expanding the scope of the family caregiver communication typology: Relationships with caregiver quality of life. Paper competitively accepted for presentation at the annual meeting of the National Communication Association, Baltimore, MD.
+              Bevan, J. L., & <b>Urbanovich, T.</b> (November, 2019). Expanding the scope of the family caregiver communication typology: Relationships with caregiver quality of life. Paper competitively accepted for presentation at the annual meeting of the National Communication Association, Baltimore, MD.
 
             </li>
             <br />
             <li style={style.infoText}>
-            <b>Urbanovich, T.</b>, & Bevan, J. L. (February, 2019). Applying the health belief model to diet change. Paper competitively accepted for presentation at the Health Communication Division of the 2019 Western States Communication Association conference, Seattle, WA.
+              <b>Urbanovich, T.</b>, & Bevan, J. L. (February, 2019). Applying the health belief model to diet change. Paper competitively accepted for presentation at the Health Communication Division of the 2019 Western States Communication Association conference, Seattle, WA.
             </li>
             <br />
             <li style={style.infoText}>
-            <b>Urbanovich, T.</b>, Atchekzai, J., & LaBelle, S. (2017).  College student disclosure about prescription stimulant misuse: The relationships of motives, stigma, and relevance to peer and self disclosure. Paper competitively accepted for presentation at the Health Communication Division of the 2018 National Communication Association, Salt Lake City, UT.
+              <b>Urbanovich, T.</b>, Atchekzai, J., & LaBelle, S. (2017).  College student disclosure about prescription stimulant misuse: The relationships of motives, stigma, and relevance to peer and self disclosure. Paper competitively accepted for presentation at the Health Communication Division of the 2018 National Communication Association, Salt Lake City, UT.
             </li>
           </ul>
         </span>
@@ -489,56 +489,56 @@ class Education extends Component {
   renderExpandedPA = (abb) => {
     return (
       <div>
-          <ul style={{ lineHeight: "1" }}>
-            <li style={style.infoText}>
+        <ul style={{ lineHeight: "1" }}>
+          <li style={style.infoText}>
             {data.PA.attr1}
-            </li>
-            <br />
-            <li style={style.infoText}>
+          </li>
+          <br />
+          <li style={style.infoText}>
             {data.PA.attr2}
-            </li>
-            <br />
-            <li style={style.infoText}>
+          </li>
+          <br />
+          <li style={style.infoText}>
             {data.PA.attr3}
-            </li>
-            <br />
-            <li style={style.infoText}>
+          </li>
+          <br />
+          <li style={style.infoText}>
             {data.PA.attr4}
-            </li>
-            <br />
-            <li style={style.infoText}>
+          </li>
+          <br />
+          <li style={style.infoText}>
             {data.PA.attr5}
-            </li>
-            <br />
-            <li style={style.infoText}>
+          </li>
+          <br />
+          <li style={style.infoText}>
             {data.PA.attr6}
-            </li>
-          </ul>
+          </li>
+        </ul>
       </div>
     )
   }
   renderExpandedSKILL = (abb) => {
     return (
       <div>
-            <li style={style.infoText}>
-            {data.SKILL.skill1}
-            </li>
-            <br />
-            <li style={style.infoText}>
-            {data.SKILL.skill2}
-            </li>
-            <br />
-            <li style={style.infoText}>
-            {data.SKILL.skill3}
-            </li>
-            <br />
-            <li style={style.infoText}>
-            {data.SKILL.skill4}
-            </li>
-            <br />
-            <li style={style.infoText}>
-            {data.SKILL.skill5}
-            </li>
+        <li style={style.infoText}>
+          {data.SKILL.skill1}
+        </li>
+        <br />
+        <li style={style.infoText}>
+          {data.SKILL.skill2}
+        </li>
+        <br />
+        <li style={style.infoText}>
+          {data.SKILL.skill3}
+        </li>
+        <br />
+        <li style={style.infoText}>
+          {data.SKILL.skill4}
+        </li>
+        <br />
+        <li style={style.infoText}>
+          {data.SKILL.skill5}
+        </li>
       </div>
     )
   }
@@ -650,7 +650,7 @@ class Education extends Component {
     BAinfo = this.renderAccordion(data.BA.abb);
     SAinfo = this.renderAccordion(data.SA.abb);
     PUBinfo = this.renderAccordionCustom(data.PUB.abb);
-    PRESinfo = this.renderAccordionCustom(data.PRES.abb); 
+    PRESinfo = this.renderAccordionCustom(data.PRES.abb);
     GRANTinfo = this.renderAccordionCustom(data.GRANT.abb);
     AWARDinfo = this.renderAccordionCustom(data.AWARD.abb);
     ASinfo = this.renderAccordionCustom(data.AS.abb);

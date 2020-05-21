@@ -60,7 +60,7 @@ class App extends Component {
 
         <div className="container" style={style.flex}>
           <div className="columns is-vcentered">
-            <div style={{maxWidth: "400px",margin: "0 auto"}} className="column is-half has-text-centered">
+            <div style={{ maxWidth: "400px", margin: "0 auto" }} className="column is-half has-text-centered">
               <Photo />
             </div>
             <div className="column is-5">
@@ -68,30 +68,36 @@ class App extends Component {
             </div>
             <div className="column is-1" />
           </div>
+          <div style={{ padding: "0 2em", fontSize: "1.5rem", textAlign: "center", maxWidth: "29em", margin: "0 auto" }} className="columns is-vcentered">
+
+
+            <span>Currently providing freelance services as a copywriter, copyeditor, and researcher. Please <a style={{ padding: "0" }} href="mailto:tessa.urb@gmail.com">email me</a> if you’d like to collaborate!
+            </span>
+          </div>
         </div>
         <hr />
-        <div style={{maxWidth: "74em", margin: "0 auto"}} className="columns is-centered is-text-centered small-centered">
-          <div style={{paddingLeft: "1.5rem"}} className="column is-6 is-centered is-text-centered">
+        <div style={{ maxWidth: "74em", margin: "0 auto" }} className="columns is-centered is-text-centered small-centered">
+          <div style={{ paddingLeft: "1.5rem" }} className="column is-6 is-centered is-text-centered">
             <Education />
           </div>
           <div className="column is-6 has-text-centered">
             <Work />
           </div>
-          
+
         </div>
         <hr />
-        <div style={{maxWidth: "74em", margin: "0 auto"}} className="columns is-centered is-text-centered small-centered">
-          <div style={{paddingLeft: "1.5rem"}} className="column is-6 is-centered is-text-centered">
+        <div style={{ maxWidth: "74em", margin: "0 auto" }} className="columns is-centered is-text-centered small-centered">
+          <div style={{ paddingLeft: "1.5rem" }} className="column is-6 is-centered is-text-centered">
             <Skill />
           </div>
           <div className="column is-6 has-text-centered">
             <PersonalAttributes />
           </div>
         </div>
-        <br/>
-        <br/>
+        <br />
+        <br />
 
-      </div>
+      </div >
     );
   }
 }
