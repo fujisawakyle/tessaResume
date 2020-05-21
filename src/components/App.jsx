@@ -61,7 +61,9 @@ class App extends Component {
         <div className="container" style={style.flex}>
           <div className="columns is-vcentered">
             <div style={{ maxWidth: "400px", margin: "0 auto" }} className="column is-half has-text-centered">
-              <Photo />
+              <a href="https://tessaraye.me/">
+                <Photo />
+              </a>
             </div>
             <div className="column is-5">
               <Info />
